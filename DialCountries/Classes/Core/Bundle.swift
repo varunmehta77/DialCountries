@@ -7,9 +7,9 @@
 
 import Foundation
 
-public class BundleLoader {
+class BundleLoader {
 	
-	public func getBundle() -> Bundle {
+	func getBundle() -> Bundle {
 		let bundle = Bundle(for: BundleLoader.self)
 		guard let url = bundle.url(forResource: "DialCountries", withExtension: "bundle") else {
 			fatalError("bundle not found")
