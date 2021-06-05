@@ -7,9 +7,9 @@
 
 import Foundation
 
-class CountriesFetcher {
+public class CountriesFetcher {
 	
-	func fetch() -> [Country] {
+	public func fetch() -> [Country] {
 		
 		let url = BundleLoader.getBundle().url(forResource: "countries", withExtension: "json")
 		let data = try! Data(contentsOf: url!)
