@@ -33,4 +33,8 @@ public struct Country: Decodable {
 		let currentCode: String? = locale.countryCode
 		return CountriesFetcher().fetch().first(where: { $0.code ==  currentCode})
 	}
+    
+    public static func getCountry(countryCode: String) -> Country? {
+        return CountriesFetcher().fetch().first(where: { $0.code ==  countryCode})
+    }
 }
